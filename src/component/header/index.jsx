@@ -1,35 +1,50 @@
-import { Link } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
 import LOGO_WHITE from "../../assets/images/global/logo_white.png";
+import LOGO_GRAY from "../../assets/images/global/logo_gray.png";
 
 import { Layout } from "../layout";
+import {
+  MainHeader,
+  FlexBox,
+  LogoLink,
+  Logo,
+  Gnb,
+  GnbLink,
+  MailButton,
+} from "./style";
 
 export const Header = () => {
+  const location = useLocation();
   return (
-    <header>
+    <MainHeader>
       <Layout>
-        <Link to={"/"}>
-          <img src={LOGO_WHITE} alt="헥사프로 로고" />
-        </Link>
-
-        <ul>
-          <li>
-            <Link to="/company">회사소개</Link>
-          </li>
-          <li>
-            <Link to="/stack">핵심기술</Link>
-          </li>
-          <li>
-            <Link to="/product">제품</Link>
-          </li>
-          <li>
-            <Link to="license">특허</Link>
-          </li>
-          <li>
-            <a href="mailto:test@naver.com">문의</a>
-          </li>
-        </ul>
+        <FlexBox>
+          <LogoLink to={"/"}>
+            <Logo
+              src={location.pathname === "/" ? LOGO_WHITE : LOGO_GRAY}
+              alt="헥사프로 로고"
+            />
+          </LogoLink>
+          <Gnb>
+            <li>
+              <GnbLink to="/company">회사소개</GnbLink>
+            </li>
+            <li>
+              <GnbLink to="/stack">핵심기술</GnbLink>
+            </li>
+            <li>
+              <GnbLink to="/product">제품</GnbLink>
+            </li>
+            <li>
+              <GnbLink to="license">특허</GnbLink>
+            </li>
+            <li>
+              <MailButton href="mailto:test@naver.com">문의</MailButton>
+            </li>
+          </Gnb>
+        </FlexBox>
       </Layout>
-    </header>
+    </MainHeader>
   );
 };
