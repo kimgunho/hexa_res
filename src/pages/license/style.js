@@ -45,6 +45,7 @@ export const Title = styled.strong`
   font-weight: 600;
   margin-bottom: 0.5rem;
   padding-bottom: 0.5rem;
+  line-height: 1.6;
   border-bottom: 1px solid #ddd;
 `;
 

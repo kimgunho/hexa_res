@@ -8,22 +8,24 @@ import { Wrapper, List, Box, Img, NoImg, Info, Title, Desc } from "./style";
 function License() {
   const licenseArr = [
     {
-      title: "특허01",
+      title:
+        "양극산화 알루미늄 기판의 제조 방법 및 이에 의하여 제조된 양극산화 알루미늄 기판",
       image: null,
       desc: "Anisotropic Ceramic Membranes from self",
     },
     {
-      title: "특허02",
+      title:
+        "양극산화 알루미늄 기판의 제조 방법 및 이에 의하여 제조된 양극산화 알루미늄 기판",
       image: null,
       desc: "Anisotropic Ceramic Membranes from self",
     },
     {
-      title: "특허03",
+      title: "양극산화 알루미늄 기판 및 이의 제조 방법",
       image: null,
       desc: "Anisotropic Ceramic Membranes from self",
     },
     {
-      title: "특허04",
+      title: "단백질 분리를 위한 양극산화 알루미늄 기판 및 이의 제조 방법",
       image: null,
       desc: "Anisotropic Ceramic Membranes from self",
     },
@@ -34,7 +36,7 @@ function License() {
       <Layout>
         <List>
           {licenseArr.map((item, index) => (
-            <Box key={item.title}>
+            <Box key={`${item.title}${index}`}>
               {item.image ? (
                 <Img src={item.image} alt="" />
               ) : (
