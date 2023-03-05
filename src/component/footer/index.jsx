@@ -1,6 +1,7 @@
 import LOGO_WHITE from "../../assets/images/global/logo_white.png";
 import { Layout } from "../layout";
 
+import { siteInfo } from "../../constant/info";
 import {
   MainFooter,
   FlexBox,
@@ -20,18 +21,18 @@ export const Footer = () => {
           <SiteInfoBox>
             <FooterLogo src={LOGO_WHITE} alt="" />
             <SiteInfo>
-              대표 : 김태선 | 주소 : 서울광역시 방배동 남동구 12-421 아명빌딩
+              대표 : {siteInfo.ceo} | 주소 : {siteInfo.address}
               <br />
-              연락처 : 010-1234-1234 | 팩스 : 82-120124-1212
-              <CopyRight>© 2023 HexaPro. All Rights Reserved.</CopyRight>
+              연락처 : {siteInfo.telView} | 팩스 : {siteInfo.fax}
+              <CopyRight>© 2023 HEXAPRO. All Rights Reserved.</CopyRight>
             </SiteInfo>
           </SiteInfoBox>
           <Customer>
-            <CustomerLink href="mailto:mail@naver.com">
-              이메일 : mail@hexapro.co.kr
+            <CustomerLink href={`mailto:${siteInfo.helpEmail}`}>
+              이메일 : {siteInfo.helpEmail}
             </CustomerLink>
-            <CustomerLink href="tel:01023121234">
-              연락처 : 010-1212-1234
+            <CustomerLink href={`tel:${siteInfo.tel}`}>
+              연락처 : {siteInfo.telView}
             </CustomerLink>
           </Customer>
         </FlexBox>
