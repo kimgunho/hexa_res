@@ -35,13 +35,16 @@ export const Header = () => {
   }, [isScroll]);
 
   return (
-    <MainHeader isScroll={isScroll > 10} isMain={location.pathname === "/"}>
+    <MainHeader
+      isScroll={Boolean(isScroll > 10)}
+      isMain={Boolean(location.pathname === "/")}
+    >
       <Layout>
         <FlexBox>
           <LogoLink to={"/"}>
-            {location.pathname === "/" && (
+            {Boolean(location.pathname === "/") && (
               <Logo
-                src={isScroll <= 10 ? LOGO_WHITE : LOGO_GRAY}
+                src={Boolean(isScroll <= 10) ? LOGO_WHITE : LOGO_GRAY}
                 alt="헥사프로 로고"
               />
             )}
@@ -49,7 +52,9 @@ export const Header = () => {
               <Logo src={LOGO_GRAY} alt="헥사프로 로고" />
             )}
           </LogoLink>
-          <Gnb color={isScroll < 10 && location.pathname === "/"}>
+          <Gnb
+            color={isScroll < 10 && location.pathname === "/" ? "#fff" : "#333"}
+          >
             <li>
               <GnbLink to="/company">회사소개</GnbLink>
             </li>

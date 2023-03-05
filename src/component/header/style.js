@@ -43,7 +43,7 @@ export const Gnb = styled.ul`
   > li {
     font-size: 1.125rem;
     font-weight: 500;
-    color: ${(props) => (props.color ? "#fff" : "#333")};
+    color: ${(props) => props.color};
   }
 `;
 

@@ -50,7 +50,7 @@ export const Part3 = () => {
         <Container>
           {itemArr.map((item) => {
             return (
-              <Card>
+              <Card key={item.title}>
                 {item.image ? <CardImg src={item.image} alt="" /> : <NoImage />}
 
                 <Box>

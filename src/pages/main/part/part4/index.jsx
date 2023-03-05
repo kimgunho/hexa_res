@@ -68,7 +68,7 @@ export const Part4 = () => {
               }}
             >
               {licenseArr.map((license) => {
-                return <Img src={license.image} alt="" />;
+                return <Img key={license.title} src={license.image} alt="" />;
               })}
             </Slider>
           </CarouselContainer>

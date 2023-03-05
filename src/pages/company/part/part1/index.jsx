@@ -71,6 +71,7 @@ export const Part1 = () => {
             <LicenseTitle>인증 및 확인서</LicenseTitle>
             {licenseArr.map((license, index) => (
               <LicenseButton
+                key={license.title}
                 isActive={activeIndex === index}
                 type="button"
                 onClick={() => {
