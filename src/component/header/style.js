@@ -3,11 +3,11 @@ import { Link } from "react-router-dom";
 
 export const MainHeader = styled.header`
   width: 100%;
-  position: sticky;
+  position: fixed;
   top: 0;
   left: 0;
-  border-bottom: 1px solid #f0f0f0;
   padding: 1rem 0;
+  z-index: 50;
 `;
 
 export const FlexBox = styled.div`
