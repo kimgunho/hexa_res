@@ -4,6 +4,8 @@ import LOGO_WHITE from "../../assets/images/global/logo_white.png";
 import LOGO_GRAY from "../../assets/images/global/logo_gray.png";
 
 import { Layout } from "../layout";
+
+import { siteInfo } from "../../constant/info";
 import {
   MainHeader,
   FlexBox,
@@ -40,7 +42,9 @@ export const Header = () => {
               <GnbLink to="license">특허</GnbLink>
             </li>
             <li>
-              <MailButton href="mailto:test@naver.com">문의</MailButton>
+              <MailButton href={`mailto:${siteInfo.helpEmail}`}>
+                문의
+              </MailButton>
             </li>
           </Gnb>
         </FlexBox>

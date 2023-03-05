@@ -1,9 +1,9 @@
 import { useRef } from "react";
 import { FiChevronRight, FiChevronLeft } from "react-icons/fi";
+import Slider from "react-slick";
 
 import slide01 from "../../../../assets/images/main/part2/slide1.jpg";
 
-import Slider from "react-slick";
 import { H2Title } from "../../../../component/global/h2Title";
 import { Layout } from "../../../../component/layout";
 
