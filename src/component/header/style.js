@@ -3,11 +3,20 @@ import { Link } from "react-router-dom";
 
 export const MainHeader = styled.header`
   width: 100%;
-  position: fixed;
+  position: ${(props) => (props.isMain ? "fixed" : "sticky")};
+  border-bottom: ${(props) => (props.isScroll ? "1px solid #ddd" : "none")};
   top: 0;
   left: 0;
   padding: 1rem 0;
   z-index: 50;
+  background-color: ${(props) => {
+    if (!props.isMain) {
+      return "#fff";
+    }
+    if (props.isScroll) {
+      return "#fff";
+    }
+  }};
 `;
 
 export const FlexBox = styled.div`
@@ -33,8 +42,8 @@ export const Gnb = styled.ul`
 
   > li {
     font-size: 1.125rem;
-    color: #333;
     font-weight: 500;
+    color: ${(props) => (props.color ? "#fff" : "#333")};
   }
 `;
 

@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 
 import LOGO_WHITE from "../../assets/images/global/logo_white.png";
@@ -17,18 +18,38 @@ import {
 } from "./style";
 
 export const Header = () => {
+  const [isScroll, setIsScroll] = useState(window.scrollY);
   const location = useLocation();
+
+  useEffect(() => {
+    const handleNavigation = (e) => {
+      const window = e.currentTarget;
+      setIsScroll(window.scrollY);
+    };
+
+    window.addEventListener("scroll", (e) => handleNavigation(e));
+
+    return () => {
+      window.removeEventListener("scroll", (e) => handleNavigation(e));
+    };
+  }, [isScroll]);
+
   return (
-    <MainHeader>
+    <MainHeader isScroll={isScroll > 10} isMain={location.pathname === "/"}>
       <Layout>
         <FlexBox>
           <LogoLink to={"/"}>
-            <Logo
-              src={location.pathname === "/" ? LOGO_WHITE : LOGO_GRAY}
-              alt="헥사프로 로고"
-            />
+            {location.pathname === "/" && (
+              <Logo
+                src={isScroll <= 10 ? LOGO_WHITE : LOGO_GRAY}
+                alt="헥사프로 로고"
+              />
+            )}
+            {location.pathname !== "/" && (
+              <Logo src={LOGO_GRAY} alt="헥사프로 로고" />
+            )}
           </LogoLink>
-          <Gnb>
+          <Gnb color={isScroll < 10 && location.pathname === "/"}>
             <li>
               <GnbLink to="/company">회사소개</GnbLink>
             </li>
