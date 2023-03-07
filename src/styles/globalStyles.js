@@ -94,6 +94,8 @@ export const GlobalStyle = createGlobalStyle`
   html {
     font-family: "Noto Sans KR", Verdana, sans-serif;
     font-size: 16px;
+    min-width: 1290px;
+    overflow-x: hidden;
   }
   /* HTML5 display-role reset for older browsers */
   article,
