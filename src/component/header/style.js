@@ -43,7 +43,6 @@ export const Gnb = styled.ul`
   > li {
     font-size: 1.125rem;
     font-weight: 500;
-    color: ${(props) => props.color};
   }
 `;
 
@@ -51,4 +50,6 @@ export const GnbLink = styled(Link)`
   color: ${(props) => props.color};
 `;
 
-export const MailButton = styled.a``;
+export const MailButton = styled.a`
+  color: #333;
+`;
