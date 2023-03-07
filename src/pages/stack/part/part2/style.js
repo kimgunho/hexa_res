@@ -3,3 +3,54 @@ import styled from "styled-components";
 export const Wrapper = styled.section`
   margin-bottom: 5rem;
 `;
+
+export const Title = styled.strong`
+  font-size: 2rem;
+  color: #333;
+  display: block;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+`;
+
+export const Desc = styled.p`
+  font-size: 1rem;
+  color: #4a4a4a;
+  font-weight: 400;
+  word-break: keep-all;
+  letter-spacing: -1px;
+  line-height: 1.8;
+  margin-bottom: 3rem;
+`;
+
+export const FlexBox = styled.div`
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+`;
+
+export const Left = styled.div`
+  width: 60%;
+`;
+
+export const Img = styled.img`
+  width: 100%;
+  height: 18.75rem;
+  object-fit: cover;
+  margin-bottom: 1rem;
+`;
+
+export const Video = styled.video`
+  width: 40%;
+`;
+
+export const SubDesc = styled.p`
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+  color: #333;
+  font-weight: 400;
+
+  > span {
+    color: #1d7fbe;
+    font-weight: 500;
+  }
+`;

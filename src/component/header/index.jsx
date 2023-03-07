@@ -56,16 +56,36 @@ export const Header = () => {
             color={isScroll < 10 && location.pathname === "/" ? "#fff" : "#333"}
           >
             <li>
-              <GnbLink to="/company">회사소개</GnbLink>
+              <GnbLink
+                color={location.pathname === "/company" ? "#1d7fbe" : "#333"}
+                to="/company"
+              >
+                회사소개
+              </GnbLink>
             </li>
             <li>
-              <GnbLink to="/stack">핵심기술</GnbLink>
+              <GnbLink
+                color={location.pathname === "/stack" ? "#1d7fbe" : "#333"}
+                to="/stack"
+              >
+                핵심기술
+              </GnbLink>
             </li>
             <li>
-              <GnbLink to="/product">제품</GnbLink>
+              <GnbLink
+                color={location.pathname === "/product" ? "#1d7fbe" : "#333"}
+                to="/product"
+              >
+                제품
+              </GnbLink>
             </li>
             <li>
-              <GnbLink to="license">특허</GnbLink>
+              <GnbLink
+                color={location.pathname === "/license" ? "#1d7fbe" : "#333"}
+                to="license"
+              >
+                특허
+              </GnbLink>
             </li>
             <li>
               <MailButton href={`mailto:${siteInfo.helpEmail}`}>

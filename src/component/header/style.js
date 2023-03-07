@@ -47,6 +47,8 @@ export const Gnb = styled.ul`
   }
 `;
 
-export const GnbLink = styled(Link)``;
+export const GnbLink = styled(Link)`
+  color: ${(props) => props.color};
+`;
 
 export const MailButton = styled.a``;
