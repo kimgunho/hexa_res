@@ -41,7 +41,7 @@ export const Gnb = styled.ul`
   width: 46.25rem;
 
   > li {
-    font-size: 1.125rem;
+    font-size: 1.25rem;
     font-weight: 500;
   }
 `;
