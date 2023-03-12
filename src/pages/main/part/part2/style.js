@@ -1,15 +1,19 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
+import { device } from "../../../../styles/common";
 
 import background from "../../../../assets/images/main/part2/background.jpg";
 
 export const Wrapper = styled.section`
   position: relative;
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  @media ${device.tablet} {
+    padding: 6rem 0;
+  }
 `;
 
 export const FlexBox = styled.div`
@@ -17,6 +21,10 @@ export const FlexBox = styled.div`
   width: 100%;
   justify-content: center;
   margin-top: 2rem;
+
+  @media ${device.tablet} {
+    flex-direction: column;
+  }
 `;
 
 export const Info = styled.div`
@@ -30,6 +38,10 @@ export const Info = styled.div`
   flex-direction: column;
   justify-content: center;
   position: relative;
+
+  @media ${device.tablet} {
+    width: 100%;
+  }
 `;
 
 export const H3Title = styled.h3`
@@ -62,11 +74,22 @@ export const MoreLink = styled(Link)`
   > svg {
     font-size: 1.25rem;
   }
+
+  @media ${device.tablet} {
+    right: 1rem;
+    top: 1rem;
+    left: auto;
+    bottom: auto;
+  }
 `;
 
 export const CarouselContainer = styled.div`
   width: 70%;
   position: relative;
+
+  @media ${device.tablet} {
+    width: 100%;
+  }
 `;
 
 export const Img = styled.img`

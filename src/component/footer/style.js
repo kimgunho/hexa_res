@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { device } from "../../styles/common";
 
 export const MainFooter = styled.footer`
   background-color: #121212;
@@ -8,11 +9,21 @@ export const MainFooter = styled.footer`
 export const FlexBox = styled.div`
   display: flex;
   justify-content: center;
+
+  @media ${device.tablet} {
+    flex-direction: column;
+  }
 `;
 
 export const SiteInfoBox = styled.div`
   width: 50%;
   border-right: 1px solid #ddd;
+
+  @media ${device.tablet} {
+    width: 100%;
+    border: 0;
+    text-align: center;
+  }
 `;
 
 export const FooterLogo = styled.img`
@@ -38,6 +49,12 @@ export const Customer = styled.div`
   padding-left: 10%;
   flex-direction: column;
   justify-content: center;
+
+  @media ${device.tablet} {
+    width: 100%;
+    text-align: center;
+    padding-left: 0;
+  }
 `;
 
 export const CustomerLink = styled.a`

@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
+import { FiAlignRight } from "react-icons/fi";
+import { RiCloseFill } from "react-icons/ri";
 
 import LOGO_WHITE from "../../assets/images/global/logo_white.png";
 import LOGO_GRAY from "../../assets/images/global/logo_gray.png";
@@ -15,10 +17,12 @@ import {
   Gnb,
   GnbLink,
   MailButton,
+  MobileButton,
 } from "./style";
 
 export const Header = () => {
   const [isScroll, setIsScroll] = useState(window.scrollY);
+  const [isMobileGnbShow, setIsMobileGnbShow] = useState(false);
   const location = useLocation();
 
   useEffect(() => {
@@ -33,6 +37,10 @@ export const Header = () => {
       window.removeEventListener("scroll", (e) => handleNavigation(e));
     };
   }, [isScroll]);
+
+  useEffect(() => {
+    setIsMobileGnbShow(false);
+  }, [location.pathname]);
 
   return (
     <MainHeader
@@ -52,9 +60,15 @@ export const Header = () => {
               <Logo src={LOGO_GRAY} alt="헥사프로 로고" />
             )}
           </LogoLink>
-          <Gnb
-            color={isScroll < 10 && location.pathname === "/" ? "#fff" : "#333"}
+          <MobileButton
+            type="button"
+            onClick={() => {
+              setIsMobileGnbShow((prev) => !prev);
+            }}
           >
+            {isMobileGnbShow ? <RiCloseFill /> : <FiAlignRight />}
+          </MobileButton>
+          <Gnb isMobile={isMobileGnbShow}>
             <li>
               <GnbLink
                 color={location.pathname === "/company" ? "#1d7fbe" : "#333"}

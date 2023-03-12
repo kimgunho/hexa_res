@@ -1,4 +1,5 @@
 import { createGlobalStyle } from "styled-components";
+import { device } from "./common";
 
 export const GlobalStyle = createGlobalStyle`
  * {
@@ -94,8 +95,14 @@ export const GlobalStyle = createGlobalStyle`
   html {
     font-family: "Noto Sans KR", Verdana, sans-serif;
     font-size: 16px;
-    min-width: 1290px;
     overflow-x: hidden;
+
+    @media ${device.tablet} {
+      font-size: 14px;
+    }
+    @media ${device.mobile} {
+      font-size: 12px;
+    }
   }
   /* HTML5 display-role reset for older browsers */
   article,

@@ -1,12 +1,13 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
+import { device } from "../../../../styles/common";
 
 import background from "../../../../assets/images/main/part4/background.jpg";
 
 export const Wrapper = styled.section`
   position: relative;
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   background-image: url(${background});
   background-repeat: no-repeat;
   background-size: cover;
@@ -20,19 +21,32 @@ export const AbsoluteBottom = styled.div`
   transform: translate(-50%, 0);
   width: 100%;
   max-width: 1290px;
-  padding: 0 2rem;
+  padding: 2rem;
+
+  @media ${device.tablet} {
+    height: 100%;
+  }
 `;
 
 export const FlexBox = styled.div`
   margin-top: 2rem;
   display: flex;
   justify-content: center;
+
+  @media ${device.tablet} {
+    flex-direction: column;
+    height: 100%;
+  }
 `;
 
 export const CarouselContainer = styled.div`
   width: 60%;
   border-radius: 1rem;
   overflow: hidden;
+
+  @media ${device.tablet} {
+    width: 100%;
+  }
 `;
 
 export const Img = styled.img`
@@ -40,6 +54,13 @@ export const Img = styled.img`
   height: 70vh;
   width: 100%;
   object-fit: cover;
+
+  @media ${device.tablet} {
+    height: 25rem;
+  }
+  @media ${device.mobile} {
+    height: 21.25rem;
+  }
 `;
 
 export const InfoBox = styled.div`
@@ -48,6 +69,12 @@ export const InfoBox = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
+  @media ${device.tablet} {
+    width: 100%;
+    padding-left: 0rem;
+    padding-top: 3rem;
+  }
 `;
 
 export const InfoTop = styled.div``;
@@ -58,6 +85,10 @@ export const HelpBox = styled.div`
   display: flex;
   flex-direction: column;
   border: 3px solid #b1e0fe;
+
+  @media ${device.tablet} {
+    margin-top: 3rem;
+  }
 `;
 
 export const ButtonBox = styled.div`
