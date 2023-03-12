@@ -37,7 +37,7 @@ export const Part1 = () => {
         </FlexBox>
       </Layout>
       <Background>
-        <Video autoPlay={true} muted loop>
+        <Video autoPlay={true} muted loop poster={mainVideo}>
           <source src={mainVideo} type="video/mp4" />
         </Video>
       </Background>
