@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { device } from "../../../../styles/common";
 
 export const Wrapper = styled.section`
   margin-bottom: 5rem;
@@ -30,6 +31,10 @@ export const Button = styled.button`
   font-size: 1.25rem;
   padding: 0.5rem 2rem;
   border-radius: 0.625rem;
+
+  @media ${device.mobile} {
+    white-space: normal;
+  }
 `;
 
 export const Container = styled.div`
@@ -67,6 +72,11 @@ export const Img = styled.img`
   width: 33.33336%;
   height: 18.75rem;
   object-fit: cover;
+
+  @media ${device.mobile} {
+    width: 100%;
+    height: 15rem;
+  }
 `;
 
 export const Video = styled.video`

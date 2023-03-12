@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { device } from "../../../../styles/common";
 
 export const Wrapper = styled.section`
   position: relative;
@@ -34,12 +35,20 @@ export const FlexBox = styled.div`
   gap: 1rem;
   justify-content: space-between;
   margin-bottom: 3rem;
+
+  @media ${device.tablet} {
+    flex-direction: column;
+  }
 `;
 
 export const CarouselContainer = styled.div`
   width: 50%;
   position: relative;
   padding-bottom: 3.125rem;
+
+  @media ${device.tablet} {
+    width: 100%;
+  }
 `;
 
 export const ArrowButtonBox = styled.div`
@@ -61,6 +70,10 @@ export const ArrowButton = styled.button`
 
 export const ProductInfoBox = styled.div`
   width: 50%;
+
+  @media ${device.tablet} {
+    width: 100%;
+  }
 `;
 
 export const Title = styled.strong`
@@ -104,6 +117,10 @@ export const HelpButton = styled.a`
   cursor: pointer;
   justify-content: center;
   border-radius: 0.625rem;
+
+  @media ${device.mobile} {
+    width: 100%;
+  }
 `;
 
 export const DownloadButton = styled.a`
@@ -116,4 +133,8 @@ export const DownloadButton = styled.a`
   align-items: center;
   justify-content: center;
   border-radius: 0.625rem;
+
+  @media ${device.mobile} {
+    width: 100%;
+  }
 `;

@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { device } from "../../../../styles/common";
 
 export const Wrapper = styled.section``;
 
@@ -28,11 +29,21 @@ export const HistoryBox = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  @media ${device.tablet} {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 `;
 
 export const HistoryList = styled.ul`
   padding-left: 2rem;
   list-style: disc;
+
+  @media ${device.tablet} {
+    width: 100%;
+  }
+
   > li {
     font-size: 1.25rem;
     color: #333;
@@ -44,6 +55,10 @@ export const CompanyLogo = styled.img`
   width: 100%;
   max-width: 25rem;
   object-fit: cover;
+
+  @media ${device.tablet} {
+    margin-top: 2rem;
+  }
 `;
 
 export const LicenseBox = styled.div`
@@ -51,10 +66,18 @@ export const LicenseBox = styled.div`
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
+
+  @media ${device.tablet} {
+    flex-direction: column;
+  }
 `;
 
 export const Info = styled.div`
   width: 14.375rem;
+
+  @media ${device.tablet} {
+    width: 100%;
+  }
 `;
 
 export const LicenseTitle = styled.strong`
@@ -75,6 +98,10 @@ export const LicenseButton = styled.button`
   color: #fff;
   padding: 0.5rem;
   margin-bottom: 0.5rem;
+
+  @media ${device.tablet} {
+    width: fit-content;
+  }
 `;
 
 export const ImageBox = styled.div`
@@ -83,6 +110,11 @@ export const ImageBox = styled.div`
   overflow: hidden;
   overflow-y: scroll;
   border: 5px solid #1d7fbe;
+
+  @media ${device.tablet} {
+    width: 100%;
+    height: 100%;
+  }
 `;
 
 export const LicenseImg = styled.img`

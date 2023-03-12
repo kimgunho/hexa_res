@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { device } from "../../styles/common";
 
 export const Wrapper = styled.section`
   margin-bottom: 6.25rem;
@@ -12,7 +13,14 @@ export const List = styled.ul`
 `;
 
 export const Box = styled.li`
-  width: 23%;
+  width: calc(24% - 1rem);
+
+  @media ${device.tablet} {
+    width: calc(50% - 1rem);
+  }
+  @media ${device.mobile} {
+    width: 100%;
+  }
 `;
 
 export const Img = styled.img`

@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { device } from "../../../../styles/common";
 
 export const Wrapper = styled.section`
   margin-bottom: 5rem;
@@ -26,10 +27,18 @@ export const FlexBox = styled.div`
   display: flex;
   align-items: flex-start;
   gap: 2rem;
+
+  @media ${device.mobile} {
+    flex-direction: column;
+  }
 `;
 
 export const Left = styled.div`
   width: 60%;
+
+  @media ${device.mobile} {
+    width: 100%;
+  }
 `;
 
 export const Img = styled.img`
@@ -41,6 +50,11 @@ export const Img = styled.img`
 
 export const Video = styled.video`
   width: 40%;
+
+  @media ${device.mobile} {
+    width: 100%;
+    height: 31.25rem;
+  }
 `;
 
 export const SubDesc = styled.p`
