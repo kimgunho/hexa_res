@@ -21,14 +21,13 @@ export const Part1 = () => {
         <FlexBox>
           <TitleBox>
             <Title>
-              We develop a new polymer <br />
-              material membrane
+              AAO 및 AAO로부터 제조되는
+              <br /> 응용 소재 개발 전문기업
             </Title>
             <Desc>
-              저희는 기존 고분자 소재 멤브레인의 한계를 극복할 새로운 소재를
-              연구 개발 하고 있습니다.
-              <br /> 또한, 수입산 고분자 화합물을 대체할 소재 및 멤브레인 제품
-              개발에 주력 하고 있습니다.
+              AAO 소재의 독보적 제조방법에 대한 기술력을 바탕으로
+              <br />
+              필터·센서·템플릿 등 다양한 AAO 응용제품을 연구개발하고 있습니다
             </Desc>
             <MoreButton to={"/company"}>
               자세히보기 <FiChevronRight />

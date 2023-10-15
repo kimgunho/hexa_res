@@ -86,12 +86,14 @@ export const Part1 = () => {
                 <HelpButton href={`mailto:${siteInfo.helpEmail}`}>
                   {siteInfo.helpEmail}
                 </HelpButton>
-                <DownloadButton
-                  download
-                  href={productArr[activeIndex].download}
-                >
-                  브로셔 다운로드
-                </DownloadButton>
+                {productArr[activeIndex].download && (
+                  <DownloadButton
+                    download
+                    href={productArr[activeIndex].download}
+                  >
+                    브로셔 다운로드
+                  </DownloadButton>
+                )}
               </FlexBox>
             </ProductInfoBox>
           </FlexBox>

@@ -13,6 +13,28 @@ export const Title = styled.strong`
   margin-bottom: 1.5rem;
 `;
 
+export const ImgFlexBox = styled.div`
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+
+  > div {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+
+    > img {
+      width: 100%;
+      object-fit: cover;
+      height: 12.5rem;
+    }
+    > p {
+      font-size: 0.875rem;
+      padding-bottom: 0.375rem;
+    }
+  }
+`;
+
 export const Desc = styled.p`
   font-size: 1rem;
   color: #4a4a4a;

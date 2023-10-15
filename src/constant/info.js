@@ -1,8 +1,8 @@
 export const siteInfo = {
   ceo: "김태선",
-  address: "서울광역시 방배동 남동구 12-421 아명빌딩",
-  tel: "01012341234",
-  telView: "010-1234-1234",
+  address: "경기도 안산시 단원구 원시동 818-5 유진테크노밸리 5, 105호",
+  tel: "0264973450",
+  telView: "02-6497-3450(서울 사무소) ",
   fax: "82-120124-1212",
-  helpEmail: "test_mail@hexapro.co.kr",
+  helpEmail: "mail@hexapro.co.kr",
 };

@@ -98,7 +98,7 @@ export const Header = () => {
                 color={location.pathname === "/license" ? "#1d7fbe" : "#333"}
                 to="license"
               >
-                특허
+                IR&PR
               </GnbLink>
             </li>
             <li>
