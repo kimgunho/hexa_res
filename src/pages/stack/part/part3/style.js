@@ -71,7 +71,7 @@ export const ImgBox = styled.div`
 export const Img = styled.img`
   width: 33.33336%;
   height: 18.75rem;
-  object-fit: cover;
+  object-fit: contain;
 
   @media ${device.mobile} {
     width: 100%;

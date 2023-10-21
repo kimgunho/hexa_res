@@ -47,7 +47,7 @@ export const Part1 = () => {
           <IntroTitle>주식회사 헥사프로는</IntroTitle>
           <IntroDesc>
             대면적이면서 안정적인 AAO 소재를 경제적으로 제조하는 독보적인 기술을
-            확보, 필터, 센서, cnt 등 AAO 소재 기반 응용 제품에 대한 연구 개발을
+            확보, 필터, 센서, CNT 등 AAO 소재 기반 응용 제품에 대한 연구 개발을
             통해 첨단 소재 산업의 새로운 지평을 열고자 합니다
           </IntroDesc>
         </IntroBox>

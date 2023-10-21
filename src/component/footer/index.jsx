@@ -21,9 +21,8 @@ export const Footer = () => {
           <SiteInfoBox>
             <FooterLogo src={LOGO_WHITE} alt="" />
             <SiteInfo>
-              대표 : {siteInfo.ceo} | 주소 : {siteInfo.address}
+              대표 : {siteInfo.ceo} <br /> 주소 : {siteInfo.address}
               <br />
-              연락처 : {siteInfo.telView} | 팩스 : {siteInfo.fax}
               <CopyRight>© 2023 HEXAPRO. All Rights Reserved.</CopyRight>
             </SiteInfo>
           </SiteInfoBox>

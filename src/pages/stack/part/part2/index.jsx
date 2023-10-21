@@ -1,6 +1,7 @@
 import topImage from "../../../../assets/images/stack/part2/top.png";
 import semImage from "../../../../assets/images/stack/part2/sem.jpg";
 import tech from "../../../../assets/images/stack/part2/tech01.mp4";
+import tech2 from "../../../../assets/images/stack/part2/tech01.mp4";
 import TEMP_IMG1 from "../../../../assets/images/stack/part2/img1.png";
 import TEMP_IMG2 from "../../../../assets/images/stack/part2/img2.png";
 import TEMP_IMG3 from "../../../../assets/images/stack/part2/img3.png";
@@ -20,7 +21,6 @@ import {
   Img,
   ImgFlexBox,
   Video,
-  SubDesc,
 } from "./style";
 export const Part2 = () => {
   return (
@@ -28,25 +28,15 @@ export const Part2 = () => {
       <Layout>
         <Title>헥사프로의 AAO</Title>
         <Desc>
-          Peel off 공정에 의해 랩스케일에서 100*150mm, 200*200mm 면적의 AAO제조
-          성공.
-          <br /> AAO의 기공 크기 및 기공 균일도가 높고 구부려도 깨지지 유연성
-          있는 소재로 확인
+          기공 크기 및 기공 균일도가 높 고 구부려도 깨지지 유연성 있는 소재로
+          확인
         </Desc>
 
         <FlexBox>
           <Left>
             <Img src={topImage} alt="" />
-            <SubDesc>
-              헥사프로의 기술로 제조된 through hole type AAO 는 기공 크기가
-              균일하게 제조됩니다.
-            </SubDesc>
-            <SubDesc>100 * 150 제작 메뉴얼 구축 중</SubDesc>
 
             <Img src={semImage} alt="" />
-            <SubDesc>
-              구부려도 깨지지 않는 <span>유연성 확보</span>
-            </SubDesc>
 
             <ImgFlexBox>
               <div>
@@ -79,9 +69,16 @@ export const Part2 = () => {
               </div>
             </ImgFlexBox>
           </Left>
-          <Video autoPlay={true} muted loop>
-            <source src={tech} type="video/mp4" />
-          </Video>
+          <div
+            style={{ display: "flex", flexDirection: "column", width: "40%" }}
+          >
+            <Video autoPlay={true} muted loop>
+              <source src={tech} type="video/mp4" />
+            </Video>
+            <Video autoPlay={true} muted loop>
+              <source src={tech2} type="video/mp4" />
+            </Video>
+          </div>
         </FlexBox>
       </Layout>
     </Wrapper>

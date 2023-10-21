@@ -56,7 +56,6 @@ export const Part3 = () => {
             </>
           )}
         </Container>
-        <Title>동영상 자료</Title>
         <Video autoPlay={true} muted loop>
           <source src={video} type="video/mp4" />
         </Video>

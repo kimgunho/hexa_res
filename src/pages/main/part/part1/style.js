@@ -13,6 +13,11 @@ export const Wrapper = styled.section`
 export const FlexBox = styled.div``;
 
 export const TitleBox = styled.div`
+  text-align: right;
+  padding: 1rem;
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
   position: relative;
   z-index: 20;
 `;

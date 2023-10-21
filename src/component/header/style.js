@@ -14,9 +14,7 @@ export const MainHeader = styled.header`
     if (!props.isMain) {
       return "#fff";
     }
-    if (props.isScroll) {
-      return "#fff";
-    }
+    return "#fff";
   }};
 
   @media ${device.tablet} {

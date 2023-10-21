@@ -65,13 +65,13 @@ export const Left = styled.div`
 
 export const Img = styled.img`
   width: 100%;
-  height: 18.75rem;
+  height: 30.75rem;
   object-fit: cover;
   margin-bottom: 1rem;
 `;
 
 export const Video = styled.video`
-  width: 40%;
+  width: 100%;
 
   @media ${device.mobile} {
     width: 100%;

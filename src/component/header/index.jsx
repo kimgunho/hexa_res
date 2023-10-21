@@ -44,7 +44,7 @@ export const Header = () => {
 
   return (
     <MainHeader
-      isScroll={Boolean(isScroll > 10)}
+      // isScroll={Boolean(isScroll > 10)}
       isMain={Boolean(location.pathname === "/")}
     >
       <Layout>
@@ -98,7 +98,7 @@ export const Header = () => {
                 color={location.pathname === "/license" ? "#1d7fbe" : "#333"}
                 to="license"
               >
-                IR&PR
+                특허/연구
               </GnbLink>
             </li>
             <li>

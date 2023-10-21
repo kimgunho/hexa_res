@@ -77,9 +77,15 @@ export const Part1 = () => {
               <Title>{productArr[activeIndex].title}</Title>
               <Desc>{productArr[activeIndex].desc}</Desc>
               <Option>
-                <li>Size : {productArr[activeIndex].size}</li>
-                <li>Pore Size : {productArr[activeIndex].PoreSize}</li>
-                <li>thickness : {productArr[activeIndex].thickness}</li>
+                {productArr[activeIndex].size && (
+                  <li>Size : {productArr[activeIndex].size}</li>
+                )}
+                {productArr[activeIndex].PoreSize && (
+                  <li>Pore Size : {productArr[activeIndex].PoreSize}</li>
+                )}
+                {productArr[activeIndex].thickness && (
+                  <li>thickness : {productArr[activeIndex].thickness}</li>
+                )}
               </Option>
               <BuyDesc>구매문의</BuyDesc>
               <FlexBox>
