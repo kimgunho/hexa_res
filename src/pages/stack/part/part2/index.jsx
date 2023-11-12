@@ -1,7 +1,7 @@
 import topImage from "../../../../assets/images/stack/part2/top.png";
 import semImage from "../../../../assets/images/stack/part2/sem.jpg";
 import tech from "../../../../assets/images/stack/part2/tech01.mp4";
-import tech2 from "../../../../assets/images/stack/part2/tech01.mp4";
+import tech2 from "../../../../assets/video/other.mp4";
 import TEMP_IMG1 from "../../../../assets/images/stack/part2/img1.png";
 import TEMP_IMG2 from "../../../../assets/images/stack/part2/img2.png";
 import TEMP_IMG3 from "../../../../assets/images/stack/part2/img3.png";
@@ -21,6 +21,7 @@ import {
   Img,
   ImgFlexBox,
   Video,
+  VideoBox,
 } from "./style";
 export const Part2 = () => {
   return (
@@ -28,7 +29,7 @@ export const Part2 = () => {
       <Layout>
         <Title>헥사프로의 AAO</Title>
         <Desc>
-          기공 크기 및 기공 균일도가 높 고 구부려도 깨지지 유연성 있는 소재로
+          기공 크기 및 기공 균일도가 높고 구부려도 깨지지 유연성 있는 소재로
           확인
         </Desc>
 
@@ -69,16 +70,14 @@ export const Part2 = () => {
               </div>
             </ImgFlexBox>
           </Left>
-          <div
-            style={{ display: "flex", flexDirection: "column", width: "40%" }}
-          >
+          <VideoBox>
             <Video autoPlay={true} muted loop>
               <source src={tech} type="video/mp4" />
             </Video>
             <Video autoPlay={true} muted loop>
               <source src={tech2} type="video/mp4" />
             </Video>
-          </div>
+          </VideoBox>
         </FlexBox>
       </Layout>
     </Wrapper>

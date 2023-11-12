@@ -41,16 +41,7 @@ export const Part4 = () => {
 
   const licenseArr = [
     {
-      title: "특허이름 01",
-      desc: "특허에 관련된 간략한 소개글을 작성해주시면 해당 글이 수정될 예정입니다.",
-      image: sample,
-      date: "2022년 09월 12일",
-    },
-    {
-      title: "특허이름 02",
-      desc: "특허에 관련된 간략한 소개글을 작성해주시면 해당 글이 수정될 예정입니다.",
-      image: sample,
-      date: "2022년 19월 22일",
+      desc: "헥사프로는 기초과학 분야를 위한 소재 개발이 미래 성장과 발전의 원동력으로 인식하고 다양한 사업분야에 응용할 수 있는 기술을 개발 ·고안하여 국내외 특허에 등재하고 있습니다",
     },
   ];
 
@@ -59,8 +50,8 @@ export const Part4 = () => {
       <AbsoluteBottom>
         <H2Title text="특허" color="#fff" />
         <FlexBox>
-          <CarouselContainer>
-            <Slider
+          {/* <CarouselContainer> */}
+          {/* <Slider
               ref={slideRef}
               arrows={false}
               beforeChange={(current) => {
@@ -70,18 +61,18 @@ export const Part4 = () => {
               {licenseArr.map((license) => {
                 return <Img key={license.title} src={license.image} alt="" />;
               })}
-            </Slider>
-          </CarouselContainer>
+            </Slider> */}
+          {/* </CarouselContainer> */}
           <InfoBox>
             <InfoTop>
-              <ButtonBox>
+              {/* <ButtonBox>
                 <Button type="button" onClick={gotoPrev}>
                   <FiChevronLeft />
                 </Button>
                 <Button type="button" onClick={gotoNext}>
                   <FiChevronRight />
                 </Button>
-              </ButtonBox>
+              </ButtonBox> */}
               <Title>{licenseArr[activeIndex].title}</Title>
               <Desc>{licenseArr[activeIndex].desc}</Desc>
               <Date>{licenseArr[activeIndex].date}</Date>

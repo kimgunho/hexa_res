@@ -74,8 +74,8 @@ export const Video = styled.video`
   width: 100%;
 
   @media ${device.mobile} {
-    width: 100%;
-    height: 31.25rem;
+    width: 50%;
+    /* height: 31.25rem; */
   }
 `;
 
@@ -88,5 +88,16 @@ export const SubDesc = styled.p`
   > span {
     color: #1d7fbe;
     font-weight: 500;
+  }
+`;
+
+export const VideoBox = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+
+  @media ${device.mobile} {
+    width: 100%;
+    flex-direction: row;
   }
 `;

@@ -5,10 +5,10 @@ export const productArr = [
   {
     title: "대면적 AAO",
     image: [item01_01, item01_01],
-    desc: "헥사프로는 기존 제조방법의 10% 비용으로 30cm 이상 크기로 through hole type AAO  제조 기술을 개발하였습니다.",
+    desc: "헥사프로는 기존 제조방법의 10% 비용으로 20cm 이상 크기로 through hole type AAO  제조 기술을 개발하였습니다.",
     size: "2cm - 20cm",
-    PoreSize: "10nm - 200nm",
-    thickness: "10um 이상",
+    PoreSize: "50nm - 100nm",
+    thickness: "10마이크로미터 이상",
     download: null,
     isWaiting: false,
   },

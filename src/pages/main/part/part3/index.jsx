@@ -54,9 +54,9 @@ export const Part3 = () => {
                 {item.image ? <CardImg src={item.image} alt="" /> : <NoImage />}
 
                 <Box>
-                  <Title>{item.title}</Title>
+                  {/* <Title>{item.title}</Title> */}
                   <Desc>{item.desc}</Desc>
-                  <MoreLink to={item.link}>자세히 보기</MoreLink>
+                  {/* <MoreLink to={item.link}>자세히 보기</MoreLink> */}
                 </Box>
               </Card>
             );

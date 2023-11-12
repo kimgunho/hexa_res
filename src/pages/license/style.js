@@ -9,7 +9,6 @@ export const List = styled.ul`
   display: flex;
   gap: 2rem;
   flex-wrap: wrap;
-  justify-content: space-between;
 `;
 
 export const Box = styled.li`
@@ -25,8 +24,8 @@ export const Box = styled.li`
 
 export const Img = styled.img`
   width: 100%;
-  height: 17.5rem;
-  object-fit: cover;
+  height: 20rem;
+  object-fit: contain;
 `;
 
 export const NoImg = styled.div`

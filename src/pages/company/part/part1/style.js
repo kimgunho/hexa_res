@@ -106,10 +106,16 @@ export const LicenseButton = styled.button`
 
 export const ImageBox = styled.div`
   width: 50rem;
-  height: 31.25rem;
-  overflow: hidden;
-  overflow-y: scroll;
-  border: 5px solid #1d7fbe;
+  /* height: 31.25rem; */
+
+  > img {
+    width: 100%;
+    height: 31.25rem;
+    object-fit: contain;
+  }
+  /* overflow: hidden; */
+  /* overflow-y: scroll; */
+  /* border: 5px solid #1d7fbe; */
 
   @media ${device.tablet} {
     width: 100%;
@@ -118,5 +124,5 @@ export const ImageBox = styled.div`
 `;
 
 export const LicenseImg = styled.img`
-  width: 100%;
+  /* width: 100%; */
 `;

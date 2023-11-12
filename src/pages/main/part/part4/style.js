@@ -7,7 +7,7 @@ import background from "../../../../assets/images/main/part4/background.jpg";
 export const Wrapper = styled.section`
   position: relative;
   width: 100%;
-  min-height: 100vh;
+  min-height: 50vh;
   background-image: url(${background});
   background-repeat: no-repeat;
   background-size: cover;
@@ -24,14 +24,14 @@ export const AbsoluteBottom = styled.div`
   padding: 2rem;
 
   @media ${device.tablet} {
-    height: 100%;
+    /* height: 100%; */
   }
 `;
 
 export const FlexBox = styled.div`
   margin-top: 2rem;
   display: flex;
-  justify-content: center;
+  /* justify-content: center; */
 
   @media ${device.tablet} {
     flex-direction: column;
@@ -64,8 +64,7 @@ export const Img = styled.img`
 `;
 
 export const InfoBox = styled.div`
-  width: 40%;
-  padding-left: 2rem;
+  width: 70%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -137,6 +136,7 @@ export const MoreLink = styled(Link)`
   padding: 0.5rem 1rem;
   display: flex;
   align-items: center;
+  margin-bottom: 1rem;
   justify-content: space-between;
   background-color: #1d7fbe;
   color: #fff;

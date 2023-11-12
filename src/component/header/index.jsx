@@ -3,7 +3,6 @@ import { useLocation } from "react-router-dom";
 import { FiAlignRight } from "react-icons/fi";
 import { RiCloseFill } from "react-icons/ri";
 
-import LOGO_WHITE from "../../assets/images/global/logo_white.png";
 import LOGO_GRAY from "../../assets/images/global/logo_gray.png";
 
 import { Layout } from "../layout";
@@ -21,40 +20,20 @@ import {
 } from "./style";
 
 export const Header = () => {
-  const [isScroll, setIsScroll] = useState(window.scrollY);
   const [isMobileGnbShow, setIsMobileGnbShow] = useState(false);
   const location = useLocation();
-
-  useEffect(() => {
-    const handleNavigation = (e) => {
-      const window = e.currentTarget;
-      setIsScroll(window.scrollY);
-    };
-
-    window.addEventListener("scroll", (e) => handleNavigation(e));
-
-    return () => {
-      window.removeEventListener("scroll", (e) => handleNavigation(e));
-    };
-  }, [isScroll]);
 
   useEffect(() => {
     setIsMobileGnbShow(false);
   }, [location.pathname]);
 
   return (
-    <MainHeader
-      // isScroll={Boolean(isScroll > 10)}
-      isMain={Boolean(location.pathname === "/")}
-    >
+    <MainHeader isMain={Boolean(location.pathname === "/")}>
       <Layout>
         <FlexBox>
           <LogoLink to={"/"}>
             {Boolean(location.pathname === "/") && (
-              <Logo
-                src={Boolean(isScroll <= 10) ? LOGO_WHITE : LOGO_GRAY}
-                alt="헥사프로 로고"
-              />
+              <Logo src={LOGO_GRAY} alt="헥사프로 로고" />
             )}
             {location.pathname !== "/" && (
               <Logo src={LOGO_GRAY} alt="헥사프로 로고" />
